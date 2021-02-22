@@ -3,7 +3,7 @@
 FROM node:15-alpine as build-web
 ARG PUBLIC_URL="/ui"
 WORKDIR /build
-COPY ./WebApp/ .
+COPY . .
 RUN apk add --no-cache --virtual .gyp python make g++ python2 py2-pip
 ENV PUBLIC_URL=$PUBLIC_URL
 RUN npm ci &&\
