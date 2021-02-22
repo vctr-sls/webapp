@@ -21,6 +21,6 @@ jobs:
 
       - name: Build and Publish Docker Image
         run: |
-          docker build . -t zekro/vctr-fe:latest -f ./WebApp/Dockerfile
+          docker build . -t zekro/vctr-fe:latest -f ./Dockerfile
           docker login -u zekro -p ${{ secrets.DOCKER_PASSWORD }}
           docker push zekro/vctr-fe:latest
